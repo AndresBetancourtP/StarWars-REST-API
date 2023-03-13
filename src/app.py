@@ -8,7 +8,13 @@ from flask_swagger import swagger
 from flask_cors import CORS
 from utils import APIException, generate_sitemap
 from admin import setup_admin
-from models import db, User, People, Planet
+from models import db, User, People, Planets
+import requests
+
+
+
+r = requests.get('https://google.com')
+print("RESULT", r)
 #from models import Person
 
 app = Flask(__name__)
